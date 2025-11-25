@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Roulette - Modern Glassmorphism Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="glass-header">
+            <h1>Video Roulette</h1>
+            <p>Connect with strangers around the world</p>
+        </header>
+
+        <main class="main-content">
+            <div class="video-container glass-panel">
+                <video id="localVideo" autoplay muted playsinline class="video-feed local-video"></video>
+                <video id="remoteVideo" autoplay playsinline class="video-feed remote-video"></video>
+                
+                <div class="video-overlay">
+                    <div id="statusIndicator" class="status-indicator">Waiting for connection...</div>
+                </div>
+            </div>
+
+            <div class="controls glass-panel">
+                <div class="control-buttons">
+                    <button id="startButton" class="control-btn primary-btn">Start Video</button>
+                    <button id="connectButton" class="control-btn secondary-btn" disabled>Find Partner</button>
+                    <button id="disconnectButton" class="control-btn danger-btn" disabled>Disconnect</button>
+                    <button id="newPartnerButton" class="control-btn accent-btn" disabled>New Partner</button>
+                </div>
+            </div>
+
+            <div class="info-panel glass-panel">
+                <h3>How it works</h3>
+                <ul>
+                    <li>Click "Start Video" to enable your camera and microphone</li>
+                    <li>Click "Find Partner" to connect with a random stranger</li>
+                    <li>Chat with your partner via video and audio</li>
+                    <li>Click "New Partner" to meet someone else</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="glass-footer">
+            <p>© 2023 Video Roulette. Connect with people worldwide.</p>
+        </footer>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
